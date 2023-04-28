@@ -1,0 +1,37 @@
+.element {
+    overflow-y: scroll;
+}
+
+.element::-webkit-scrollbar {
+    display: none;
+}
+
+.REMOVE {
+    animation: remove-load 200ms ease-in;
+}
+
+
+@keyframes remove-load {
+    0% {
+        transform: scale(1.02);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 
+font-family: 'Montserrat',
+sans-serif;
+font-family: 'Poppins',
+sans-serif;
+font-family: 'PT Sans',
+sans-serif;
+font-family: 'Raleway',
+sans-serif;
+font-family: 'Roboto',
+sans-serif;
+font-family: 'Source Sans Pro',
+sans-serif; */

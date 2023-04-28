@@ -1,0 +1,16 @@
+.CONTAINER {
+    transition: all 500ms ease-in
+}
+
+.testimonial-carousel .carousel-control:hover::before {
+    color: red !important;
+}
+
+.testimonial-carousel .carousel-control:hover::after {
+    color: red !important;
+}
+
+
+/* MDBCarouselItem::showControls {
+    color: red;
+} */

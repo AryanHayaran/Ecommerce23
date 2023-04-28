@@ -1,0 +1,14 @@
+.NAVBAR {
+    animation: nav-load 500ms ease-in;
+
+}
+
+@keyframes nav-load {
+    0% {
+        transform: translateX(-80%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
