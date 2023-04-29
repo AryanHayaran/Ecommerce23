@@ -14,3 +14,9 @@
 /* MDBCarouselItem::showControls {
     color: red;
 } */
+
+@media (max-width:500px) {
+    .CARSOREL{
+        height: 150px !important;
+    }
+}

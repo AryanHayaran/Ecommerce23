@@ -7,24 +7,25 @@ import {
 import Image1 from "./Image1.png"
 import Image2 from "./Image2.png"
 import Image3 from "./Image3.png";
+import "./Carasoul.css"
 const Carasoul=()=> {
   return (
     <div>
       <MDBCarousel showControls showIndicators dark>
         <MDBCarouselItem
-          className="w-100 lg:h-[300px] md:h-[250px] sm:h-[200px] h-[200px] d-block d-block"
+          className="w-100 lg:h-[300px] md:h-[250px] sm:h-[200px] h-[200px] d-block d-block CARSOREL"
           itemId={1}
           src={Image1}
           alt="..."
         />
         <MDBCarouselItem
-          className="w-100 lg:h-[300px] md:h-[250px] opacity-95 sm:h-[200px] h-[200px] d-block d-block"
+          className="w-100 lg:h-[300px] md:h-[250px] opacity-95 sm:h-[200px] h-[200px] d-block d-block CARSOREL"
           itemId={2}
           src={Image2}
           alt="..."
         />
         <MDBCarouselItem
-          className="w-100 lg:h-[300px] md:h-[250px] sm:h-[200px] h-[200px] d-block d-block"
+          className="w-100 lg:h-[300px] md:h-[250px] sm:h-[200px] h-[200px] d-block d-block CARSOREL"
           itemId={3}
           src={Image3}
           alt="..."

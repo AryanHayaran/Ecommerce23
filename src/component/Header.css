@@ -12,3 +12,25 @@
         transform: translateX(0);
     }
 }
+
+.SHOPPINGCART {
+    visibility: hidden;
+}
+
+
+
+@media (min-width: 500px) and (max-width: 638px) {
+
+    /* … */
+    .SHOPPINGCART {
+        visibility: visible;
+    }
+
+    .FORM {
+        margin-left: 150px !important;
+    }
+
+    .DROP{
+        right: 45px !important;
+    }
+}

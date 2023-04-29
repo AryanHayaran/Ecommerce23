@@ -49,7 +49,8 @@ const Header = () => {
             onClick={() => {
               navigate("/");
             }}
-            className="lg:hidden drop-shadow-lg cursor-pointer ml-[10px] mt-[4px] md:hidden absolute sm:hidden flex text-[20px] text-[white]"
+           
+            className="SHOPPINGCART drop-shadow-lg cursor-pointer ml-[10px] mt-[4px]  absolute   text-[20px] text-[white]"
           >
             Shopping Cart
           </div>
@@ -58,10 +59,10 @@ const Header = () => {
               e.preventDefault();
               setQuery("");
             }}
-            className="rounded-[5px] shadow-lg hover:border-[#ff4848] hover:border-[1px] bg-[#e0e4e9] flex flex-row 
+            className="FORM rounded-[5px] shadow-lg hover:border-[#ff4848] hover:border-[1px] bg-[#e0e4e9] flex flex-row 
             lg:w-[450px] md:w-[300px] sm:w-[230px]
              w-[250px] justify-center items-center  lg:my-auto  
-             md:my-auto sm:my-auto h-[40px]  lg:ml-[0px] md:ml-[0px] sm:ml-[0px] ml-[150px]"
+             md:my-auto sm:my-auto h-[40px]  lg:ml-[0px] md:ml-[0px] sm:ml-[0px] ml-[15px]"
           >
             <input
               className=" outline-none  bg-inherit text-[#494949] pl-[10px] h-[38px]  
@@ -76,7 +77,7 @@ const Header = () => {
             />
             <BsSearch className="cursor-pointer ml-[5px] sm:ml-[5px] text-[#0101fc]" />
             <div
-              className="absolute ml-[10px] right-[45px] cursor-pointer 
+              className="DROP   absolute ml-[10px] right-[20px] cursor-pointer 
              border-[2px] rounded-[4px] border-[#ffffffac]
               text-[#ffffffb1] lg:hidden md:hidden sm:hidden "
             >
