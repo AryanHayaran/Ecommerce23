@@ -21,6 +21,12 @@
     }
 }
 
+@media (min-width:475px) {
+    .FLEXBOX{
+        display: flex !important;
+        flex-direction: row !important;
+    }
+}
 
 /* 
 font-family: 'Montserrat',

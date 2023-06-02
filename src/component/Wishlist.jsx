@@ -21,9 +21,7 @@ const Wishlist = () => {
   console.log("Add", itemCart);
   return (
     <div>
-      <div className="fixed z-[100] ">
-        <Header />
-      </div>
+
       {/* <Header /> */}
       {
         <div className="pt-[100px]">

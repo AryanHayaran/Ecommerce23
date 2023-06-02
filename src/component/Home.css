@@ -8,6 +8,70 @@
     animation: add-cart 300ms ease-out;
 }
 
+.SHADOW {
+    box-shadow: 0px 0px 6px 2px #e0e0e0;
+}
+
+/* @media (min-width:1422px) {
+    .GRID {
+        display: grid !important;
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .BOX {
+        max-width: 320px !important;
+        width: auto !important;
+    }
+
+
+} */
+
+@media (max-width:639px) and (min-width:455px) {
+    /* .FILTER {
+        visibility: visible;
+    } */
+
+    /* .CONTAINER {
+        margin-left: 10px !important;
+    } */
+
+    .MARGIN {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+}
+
+
+@media (max-width:455px) {
+    .FILTER {
+        visibility: hidden !important;
+        display: none !important;
+    }
+
+    .FILTERICON {
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+    }
+
+    .MARGINAUTO{
+        margin: 4px auto 4px auto !important;
+    }
+}
+
+.INHERIT {
+    width: inherit !important;
+}
+
+@media (min-width:455px) {
+    .FILTERICON {
+        visibility: hidden !important;
+        display: none !important;
+    }
+
+    .FILTER {
+        visibility: visible !important;
+    }
+}
 
 @keyframes add-cart {
     0% {

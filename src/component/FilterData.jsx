@@ -1,0 +1,12 @@
+FILTER = [smartphone,
+laptops,
+fragrances,
+groceries,
+furniture,
+womens-dresses,
+womens-shoe,
+mens-shirts,
+mens-shoes,
+mens-watches,
+sunglasess,
+womens-jewellary];

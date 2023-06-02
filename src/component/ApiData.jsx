@@ -27,7 +27,9 @@ const reducer = (state, { type, payload }) => {
 };
 
 const ApiData = (ID) => {
-  const URL = `https://fakestoreapi.com/products/${ID}`;
+  // const URL = `https://fakestoreapi.com/products/${ID}`;
+  const URL = `https://dummyjson.com/products/${ID}`;
+
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
     dispatch({ type: ACTION.API_REQUEST });

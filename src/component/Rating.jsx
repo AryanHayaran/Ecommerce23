@@ -32,7 +32,7 @@ const Rating = ({ rate, count }) => {
   return (
     <div className="RATING flex flex-row justify-start items-center relative">
       <p> {ratings}</p>
-      <p className="text-[16px] mx-2 py-[0px] mt-[4px] text-[#908f8f] ">({count}) Ratings</p>
+      <p className="text-[13px] mx-2 py-[0px] mt-[4px] text-[#908f8f] ">({count}) Ratings</p>
     </div>
   );
 };

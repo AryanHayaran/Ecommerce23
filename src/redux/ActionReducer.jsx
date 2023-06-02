@@ -6,42 +6,33 @@ const cartsSlice = createSlice({
   initialState: { itemCart: [], priceCart: 0, totalItemCart: 0, itemById: [] },
   reducers: {
     addCart: (state, { payload }) => {
-      state.priceCart = state.priceCart + Number(payload.price);
-      const { id } = payload;
-      const doesItemExist = state.itemById.find((item) => item.id === id);
-      if (doesItemExist) {
-        state.itemById = state.itemById.map((item) => {
-          if (item.id === id) {
-            return {
-              ...item,
-              quantity: item.quantity + 1,
-            };
-          }
-          return item;
-        });
-      } else {
-        state.itemById.push({
-          ...payload,
-          quantity: 1,
-        });
+      // state.priceCart = state.priceCart + Number(payload.price);
+      const isPresent = state.itemById.find((item) => item.id === payload.id)
+      if (isPresent) {
+          state.itemById = state.itemById.map((item) => {
+            if (item.id === payload.id) {
+        state.priceCart =
+          state.priceCart +
+          Number(payload.price * 70 * payload.quantity) -
+          Number(item.price * 70 * item.quantity);
 
+              return payload;
+            } else {
+              return item;
+            }
+          });
       }
+      else {
+        state.priceCart =
+          state.priceCart + Number(payload.price * payload.quantity * 70);
+        state.itemById.push(payload)
+      }
+    
     },
+
     delCart: (state, { payload }) => {
-      state.itemById = state.itemById.map((item) => {
-        if (item.id === payload.id) {
-          if (item.quantity > 1)
-            return {
-              ...item,
-              quantity: item.quantity - 1,
-            };
-        } else {
-          return item;
-        }
-      });
-      state.priceCart = state.priceCart - Number(payload.price);
-    },
-    deleteCart: (state, { payload }) => {
+        state.priceCart = state.priceCart - Number(payload.price * 70);
+
       state.itemById = state.itemById.filter((item) => item.id !== payload.id);
     },
   },
@@ -79,3 +70,23 @@ export const getTotalWishlist = (state) => state.wishlists.totalItemWishlist;
 
 export const { addWishlist, delWishlist } = wishlistSlice.actions;
 export const WishlistReducer = wishlistSlice.reducer;
+
+
+const productSlice = createSlice({
+  name: "productsData",
+  initialState: { products: "",loading:true },
+  reducers: {
+    setProductsData: (state, { payload }) => {
+      state.products = payload;
+      state.loading=false
+    },
+    setLoading: (state, { payload }) => {
+      state.loading= true;
+    }
+  }
+})
+
+export const getProductsData = (state) => state.productsData.products;
+export const getLoading = (state) => state.productsData.loading;
+export const { setProductsData,setLoading } = productSlice.actions;
+export const ProductsReducer = productSlice.reducer;
